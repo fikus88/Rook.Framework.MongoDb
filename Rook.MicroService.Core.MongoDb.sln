@@ -9,6 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rook.MicroService.Core.Mong
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rook.MicroService.Core.MongoDb.ExampleService", "Rook.MicroService.Core.MongoDb.ExampleService\Rook.MicroService.Core.MongoDb.ExampleService.csproj", "{34170772-8471-4C97-A04E-44381EABE951}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{7BE827E1-6F6B-4345-8099-A0EE075C6832}"
+ProjectSection(SolutionItems) = preProject
+	.travis.yml = .travis.yml
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -4,10 +4,9 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
 
     <Authors>Rook contributors</Authors>
-    <Company>Microlise</Company>
+    <Company>Rook Framework</Company>
     <Description>.Net Standard Core Code for interfacing with MongoDb in a Microservice</Description>
-
-    <Version>2017.11.28.2</Version>
+    
     <AssemblyVersion>2017.11.28.2</AssemblyVersion>
     <FileVersion>2017.11.28.2</FileVersion>
 

@@ -7,6 +7,7 @@
     <e p="$USER_HOME$/.nuget/packages/mstest.testadapter/1.3.0/build/_common/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll" t="Include" />
     <e p="$USER_HOME$/.nuget/packages/mstest.testadapter/1.3.0/build/netcoreapp1.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll" t="Include" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p=".travis.yml" t="Include" />
       <e p="Rook.MicroService.Core.MongoDb" t="IncludeRecursive">
         <e p="AssemblyInfo.cs" t="Include" />
         <e p="Data" t="Include">
@@ -71,6 +72,7 @@
         </e>
       </e>
       <e p="Rook.MicroService.Core.MongoDb.sln" t="IncludeFlat" />
+      <e p="SolutionItems" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>

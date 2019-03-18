@@ -23,7 +23,12 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba4b975-8916-4de4-8050-ef3cbb997544" name="Default Changelist" comment="" />
+    <list default="true" id="0ba4b975-8916-4de4-8050-ef3cbb997544" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.directory" beforeDir="false" afterPath="$PROJECT_DIR$/.directory" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rook.MicroService.Core.MongoDb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rook.MicroService.Core.MongoDb/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Rook.MicroService.Core.MongoDb.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Rook.MicroService.Core.MongoDb.csproj" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +37,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/ContainerTests.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="23">
@@ -45,6 +50,15 @@
                 <marker date="1552919759464" expanded="true" signature="921:934" ph="{...}" />
                 <marker date="1552919759464" expanded="true" signature="976:989" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -230,11 +244,16 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/StructureMap/MongoRegistry.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/TestUtils/MongoStoreTestUtils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Health/MongoDbHealthCheck.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/ContainerTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.ExampleService/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/MongoStoreTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Data/MongoStore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.ExampleService/MongoAccess.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -249,6 +268,8 @@
         <option value="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.ExampleService/Program.cs" />
         <option value="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/MongoStoreTests.cs" />
         <option value="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/ContainerTests.cs" />
+        <option value="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Rook.MicroService.Core.MongoDb.csproj" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -281,25 +302,7 @@
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Rook.MicroService.Core.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Rook.MicroService.Core.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Rook.MicroService.Core.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Rook.MicroService.Core.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Rook.MicroService.Core.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Rook.MicroService.Core.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
-              <item name=".NETCoreApp 2" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Rook.MicroService.Core.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Rook.MicroService.Core.MongoDb.Tests.Unit" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="SolutionItems" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
@@ -314,6 +317,7 @@
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.travis.yml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -359,12 +363,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552919274823</updated>
-      <workItem from="1552919275976" duration="511000" />
+      <workItem from="1552919275976" duration="1197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="511000" />
+    <option name="totallyTimeSpent" value="1197000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -377,22 +381,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Image Layers" />
       <window_info id="Capture Tool" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="JIRA" />
       <window_info anchor="bottom" id="NuGet" weight="0.32941177" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Unit Tests" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Unit Tests" weight="0.32941177" />
       <window_info anchor="bottom" id="TeamCity" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Build" weight="0.32941177" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Build" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32941177" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -589,6 +594,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Rook.MicroService.Core.MongoDb.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/ContainerTests.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -601,6 +613,13 @@
             <marker date="1552919759464" expanded="true" signature="921:934" ph="{...}" />
             <marker date="1552919759464" expanded="true" signature="976:989" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
         </state>
       </provider>
     </entry>
