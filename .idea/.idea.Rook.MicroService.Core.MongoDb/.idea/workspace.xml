@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BuildServerSettings">
+    <option name="LOGIN" value="" />
+    <option name="SERVER_URL" value="http://buildserver" />
+    <option name="REMEMBER_ME" value="true" />
+    <option name="USE_IDEA_PROXY_SETTINGS" value="true" />
+    <option name="INSPECTIONS_BUILD_TYPE_IDS" />
+    <option name="DUPLICATES_BUILD_TYPE_IDS" />
+    <option name="COVERAGE_SETTINGS" />
+    <option name="TEST_STATUS_ENABLED" value="true" />
+    <option name="TEST_STATUS_SHOW_SUCCESSFUL" value="false" />
+    <option name="POSTPONE_SUITABLE_CONFIGURATIONS_SEARCH" value="false" />
+    <option name="ARTIFACTS_BUILD_TYPE_IDS" />
+    <option name="PERFORM_COMMIT_IF_SUCCESSFUL" value="true" />
+    <option name="PERFORM_COMMIT_IF_NO_NEW_FAILED_TESTS" value="false" />
+    <option name="REQUEST_CONFIRMATON" value="false" />
+    <option name="PRE_TESTED_COMMIT" value="true" />
+    <option name="FILTER_BY_STATUS" value="false" />
+    <option name="FILTER_MARKED_AS_FIXED" value="false" />
+    <option name="SHOW_CLOSE_PROMPT" value="true" />
+    <option name="TOOL_WINDOW_SELECTED_CONTENT_INDEX" value="0" />
+    <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0ba4b975-8916-4de4-8050-ef3cbb997544" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/ContainerTests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+              <folding>
+                <marker date="1552919759464" expanded="true" signature="6:187" ph="..." />
+                <marker date="1552919759464" expanded="true" signature="245:991" ph="{...}" />
+                <marker date="1552919759464" expanded="true" signature="295:879" ph="{...}" />
+                <marker date="1552919759464" expanded="true" signature="398:873" ph="{...}" />
+                <marker date="1552919759464" expanded="true" signature="921:934" ph="{...}" />
+                <marker date="1552919759464" expanded="true" signature="976:989" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.ExampleService/MongoAccess.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="10" selection-start-column="10" selection-end-column="10" />
+              <folding>
+                <marker date="1552919701987" expanded="true" signature="6:191" ph="..." />
+                <marker date="1552919701987" expanded="true" signature="248:948" ph="{...}" />
+                <marker date="1552919701987" expanded="true" signature="399:864" ph="{...}" />
+                <marker date="1552919701987" expanded="true" signature="507:565" ph="{...}" />
+                <marker date="1552919701987" expanded="true" signature="633:858" ph="{...}" />
+                <marker date="1552919701987" expanded="true" signature="899:946" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Data/MongoStore.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+              <folding>
+                <marker date="1552919726330" expanded="true" signature="6:283" ph="..." />
+                <marker date="1552919726330" expanded="true" signature="359:13957" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="422:13955" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="972:1314" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="1434:1851" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="1580:1841" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="1884:2001" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="2011:2257" ph="/// Gets an IQueryable collection of the DataEntity requested. If the collection does not already exist, it will  ... " />
+                <marker date="1552919726330" expanded="true" signature="2336:2600" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="2610:2852" ph="/// Gets the Mongo collection of the DataEntity requested. If the collection does not already exist, it will be c ... " />
+                <marker date="1552919726330" expanded="true" signature="2931:3422" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="3051:3325" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="3432:3632" ph="/// Returns the number of items of the requested type in the Mongo collection. ... " />
+                <marker date="1552919726330" expanded="true" signature="3688:3936" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="3946:4179" ph="/// Returns the number of items of the requested type in the Mongo collection filtered by the given expression. ... " />
+                <marker date="1552919726330" expanded="true" signature="4299:4695" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="4925:5738" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="5787:7982" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="6411:6819" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="6963:7915" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="7172:7292" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="7326:7901" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="8110:8555" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="8308:8512" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="8565:8773" ph="/// Puts the given DataEntity into its corresponding Mongo collection ... " />
+                <marker date="1552919726330" expanded="true" signature="8842:9371" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="9024:9361" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="9381:9713" ph="/// Replaces all items matching the filter with the given DataEntity in the corresponding Mongo collection ... " />
+                <marker date="1552919726330" expanded="true" signature="9844:10425" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="10572:11121" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="11188:11557" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="11637:11699" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="11817:12286" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="12347:12878" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="12511:12868" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="13003:13340" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="13368:13502" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="13582:13746" ph="{...}" />
+                <marker date="1552919726330" expanded="true" signature="13869:13949" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Health/MongoDbHealthCheck.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+              <folding>
+                <marker date="1552919726314" expanded="true" signature="6:230" ph="..." />
+                <marker date="1552919726314" expanded="true" signature="279:1029" ph="{...}" />
+                <marker date="1552919726314" expanded="true" signature="332:1027" ph="{...}" />
+                <marker date="1552919726314" expanded="true" signature="505:593" ph="{...}" />
+                <marker date="1552919726314" expanded="true" signature="626:1021" ph="{...}" />
+                <marker date="1552919726314" expanded="true" signature="652:723" ph="{...}" />
+                <marker date="1552919726314" expanded="true" signature="756:1011" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/StructureMap/MongoRegistry.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+              <folding>
+                <marker date="1552919726306" expanded="true" signature="6:126" ph="..." />
+                <marker date="1552919726306" expanded="true" signature="181:741" ph="{...}" />
+                <marker date="1552919726306" expanded="true" signature="225:739" ph="{...}" />
+                <marker date="1552919726306" expanded="true" signature="351:733" ph="{...}" />
+                <marker date="1552919726306" expanded="true" signature="399:522" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/TestUtils/MongoStoreTestUtils.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="10" selection-start-column="10" selection-end-column="10" />
+              <folding>
+                <marker date="1552919726324" expanded="true" signature="6:79" ph="..." />
+                <marker date="1552919726324" expanded="true" signature="160:850" ph="{...}" />
+                <marker date="1552919726324" expanded="true" signature="206:848" ph="{...}" />
+                <marker date="1552919726324" expanded="true" signature="305:609" ph="{...}" />
+                <marker date="1552919726324" expanded="true" signature="619:700" ph="/// Typically used with unit testing ... " />
+                <marker date="1552919726324" expanded="true" signature="764:842" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.ExampleService/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+              <folding>
+                <marker date="1552919751347" expanded="true" signature="6:190" ph="..." />
+                <marker date="1552919751347" expanded="true" signature="247:1981" ph="{...}" />
+                <marker date="1552919751347" expanded="true" signature="267:1979" ph="{...}" />
+                <marker date="1552919751347" expanded="true" signature="313:1973" ph="{...}" />
+                <marker date="1552919751347" expanded="true" signature="336:533" ph="/* --------------------------------- ... */" />
+                <marker date="1552919751347" expanded="true" signature="772:1494" ph="/* It's also possible to use these utility methods so we can see what the container has scanned/registered ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/MongoStoreTests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+              <folding>
+                <marker date="1552919751339" expanded="true" signature="6:505" ph="..." />
+                <marker date="1552919751339" expanded="true" signature="563:34068" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="614:34066" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="931:1383" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="1621:2136" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="2250:4049" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="2459:2617" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="2718:3000" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="2806:2985" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="4159:5563" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="5677:7189" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="7291:8816" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="8914:10334" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="10430:12183" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="12261:14956" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="13318:13476" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="13575:13621" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="15040:16950" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="17037:18958" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="19047:20958" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="21050:22991" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="23073:24805" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="24907:25670" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="25741:27750" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="27827:30372" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="28948:29106" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="29209:29270" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="30453:33002" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="31574:31732" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="31835:31896" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="33078:33331" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="33426:33668" ph="{...}" />
+                <marker date="1552919751339" expanded="true" signature="33811:34060" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/StructureMap/MongoRegistry.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/TestUtils/MongoStoreTestUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Health/MongoDbHealthCheck.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/ContainerTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Data/MongoStore.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.ExampleService/MongoAccess.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.ExampleService/MongoAccess.cs" />
+        <option value="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Data/MongoStore.cs" />
+        <option value="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Health/MongoDbHealthCheck.cs" />
+        <option value="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/StructureMap/MongoRegistry.cs" />
+        <option value="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/TestUtils/MongoStoreTestUtils.cs" />
+        <option value="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.ExampleService/Program.cs" />
+        <option value="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/MongoStoreTests.cs" />
+        <option value="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/ContainerTests.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JQLSearcherManager">
+    <searchers>
+      <JQLSearcher alias="Assigned to me" jql="assignee = currentUser()" />
+    </searchers>
+  </component>
+  <component name="JiraServerManager">
+    <selected>-1</selected>
+    <servers />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Rook.MicroService.Core.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Rook.MicroService.Core.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Rook.MicroService.Core.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Rook.MicroService.Core.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Rook.MicroService.Core.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Rook.MicroService.Core.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Rook.MicroService.Core.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
+              <item name=".NETCoreApp 2" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Rook.MicroService.Core.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Rook.MicroService.Core.MongoDb.Tests.Unit" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Project.Default">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ba4b975-8916-4de4-8050-ef3cbb997544" name="Default Changelist" comment="" />
+      <created>1552919274823</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552919274823</updated>
+      <workItem from="1552919275976" duration="511000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="511000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="JIRA" />
+      <window_info anchor="bottom" id="NuGet" weight="0.32941177" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info active="true" anchor="bottom" id="Unit Tests" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="TeamCity" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Build" weight="0.32941177" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.ExampleService/MongoAccess.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+          <folding>
+            <marker date="1552919701987" expanded="true" signature="6:191" ph="..." />
+            <marker date="1552919701987" expanded="true" signature="248:948" ph="{...}" />
+            <marker date="1552919701987" expanded="true" signature="399:864" ph="{...}" />
+            <marker date="1552919701987" expanded="true" signature="507:565" ph="{...}" />
+            <marker date="1552919701987" expanded="true" signature="633:858" ph="{...}" />
+            <marker date="1552919701987" expanded="true" signature="899:946" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Data/MongoStore.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding>
+            <marker date="1552919726330" expanded="true" signature="6:283" ph="..." />
+            <marker date="1552919726330" expanded="true" signature="359:13957" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="422:13955" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="972:1314" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="1434:1851" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="1580:1841" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="1884:2001" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="2011:2257" ph="/// Gets an IQueryable collection of the DataEntity requested. If the collection does not already exist, it will  ... " />
+            <marker date="1552919726330" expanded="true" signature="2336:2600" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="2610:2852" ph="/// Gets the Mongo collection of the DataEntity requested. If the collection does not already exist, it will be c ... " />
+            <marker date="1552919726330" expanded="true" signature="2931:3422" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="3051:3325" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="3432:3632" ph="/// Returns the number of items of the requested type in the Mongo collection. ... " />
+            <marker date="1552919726330" expanded="true" signature="3688:3936" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="3946:4179" ph="/// Returns the number of items of the requested type in the Mongo collection filtered by the given expression. ... " />
+            <marker date="1552919726330" expanded="true" signature="4299:4695" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="4925:5738" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="5787:7982" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="6411:6819" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="6963:7915" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="7172:7292" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="7326:7901" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="8110:8555" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="8308:8512" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="8565:8773" ph="/// Puts the given DataEntity into its corresponding Mongo collection ... " />
+            <marker date="1552919726330" expanded="true" signature="8842:9371" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="9024:9361" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="9381:9713" ph="/// Replaces all items matching the filter with the given DataEntity in the corresponding Mongo collection ... " />
+            <marker date="1552919726330" expanded="true" signature="9844:10425" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="10572:11121" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="11188:11557" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="11637:11699" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="11817:12286" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="12347:12878" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="12511:12868" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="13003:13340" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="13368:13502" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="13582:13746" ph="{...}" />
+            <marker date="1552919726330" expanded="true" signature="13869:13949" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Health/MongoDbHealthCheck.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding>
+            <marker date="1552919726314" expanded="true" signature="6:230" ph="..." />
+            <marker date="1552919726314" expanded="true" signature="279:1029" ph="{...}" />
+            <marker date="1552919726314" expanded="true" signature="332:1027" ph="{...}" />
+            <marker date="1552919726314" expanded="true" signature="505:593" ph="{...}" />
+            <marker date="1552919726314" expanded="true" signature="626:1021" ph="{...}" />
+            <marker date="1552919726314" expanded="true" signature="652:723" ph="{...}" />
+            <marker date="1552919726314" expanded="true" signature="756:1011" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/StructureMap/MongoRegistry.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <folding>
+            <marker date="1552919726306" expanded="true" signature="6:126" ph="..." />
+            <marker date="1552919726306" expanded="true" signature="181:741" ph="{...}" />
+            <marker date="1552919726306" expanded="true" signature="225:739" ph="{...}" />
+            <marker date="1552919726306" expanded="true" signature="351:733" ph="{...}" />
+            <marker date="1552919726306" expanded="true" signature="399:522" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/TestUtils/MongoStoreTestUtils.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+          <folding>
+            <marker date="1552919726324" expanded="true" signature="6:79" ph="..." />
+            <marker date="1552919726324" expanded="true" signature="160:850" ph="{...}" />
+            <marker date="1552919726324" expanded="true" signature="206:848" ph="{...}" />
+            <marker date="1552919726324" expanded="true" signature="305:609" ph="{...}" />
+            <marker date="1552919726324" expanded="true" signature="619:700" ph="/// Typically used with unit testing ... " />
+            <marker date="1552919726324" expanded="true" signature="764:842" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.ExampleService/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <folding>
+            <marker date="1552919751347" expanded="true" signature="6:190" ph="..." />
+            <marker date="1552919751347" expanded="true" signature="247:1981" ph="{...}" />
+            <marker date="1552919751347" expanded="true" signature="267:1979" ph="{...}" />
+            <marker date="1552919751347" expanded="true" signature="313:1973" ph="{...}" />
+            <marker date="1552919751347" expanded="true" signature="336:533" ph="/* --------------------------------- ... */" />
+            <marker date="1552919751347" expanded="true" signature="772:1494" ph="/* It's also possible to use these utility methods so we can see what the container has scanned/registered ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/MongoStoreTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding>
+            <marker date="1552919751339" expanded="true" signature="6:505" ph="..." />
+            <marker date="1552919751339" expanded="true" signature="563:34068" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="614:34066" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="931:1383" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="1621:2136" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="2250:4049" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="2459:2617" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="2718:3000" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="2806:2985" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="4159:5563" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="5677:7189" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="7291:8816" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="8914:10334" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="10430:12183" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="12261:14956" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="13318:13476" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="13575:13621" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="15040:16950" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="17037:18958" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="19047:20958" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="21050:22991" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="23073:24805" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="24907:25670" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="25741:27750" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="27827:30372" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="28948:29106" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="29209:29270" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="30453:33002" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="31574:31732" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="31835:31896" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="33078:33331" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="33426:33668" ph="{...}" />
+            <marker date="1552919751339" expanded="true" signature="33811:34060" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/ContainerTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <folding>
+            <marker date="1552919759464" expanded="true" signature="6:187" ph="..." />
+            <marker date="1552919759464" expanded="true" signature="245:991" ph="{...}" />
+            <marker date="1552919759464" expanded="true" signature="295:879" ph="{...}" />
+            <marker date="1552919759464" expanded="true" signature="398:873" ph="{...}" />
+            <marker date="1552919759464" expanded="true" signature="921:934" ph="{...}" />
+            <marker date="1552919759464" expanded="true" signature="976:989" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

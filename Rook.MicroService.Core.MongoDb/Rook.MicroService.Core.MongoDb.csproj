@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <Authors>Rook contributors</Authors>
+    <Company>Microlise</Company>
+    <Description>.Net Standard Core Code for interfacing with MongoDb in a Microservice</Description>
+
+    <Version>2017.11.28.2</Version>
+    <AssemblyVersion>2017.11.28.2</AssemblyVersion>
+    <FileVersion>2017.11.28.2</FileVersion>
+
+    <LangVersion>7.1</LangVersion>
+    <ProjectGuid>81DA76FE-0E70-49E0-AE32-359AAA33C40B</ProjectGuid>
+    <PackageVersion></PackageVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.6.1" />
+    <PackageReference Include="Rook.MicroService.Core" Version="2019.3.18.35" />
+  </ItemGroup>
+
+</Project>
