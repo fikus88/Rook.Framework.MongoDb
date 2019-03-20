@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="config.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.msbuild" Version="2.1.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
+    <PackageReference Include="Moq" Version="4.8.3" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.3.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.3.0" />
+    <PackageReference Include="Rook.Framework.Core" Version="2019.3.20.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rook.Framework.MongoDb\Rook.Framework.MongoDb.csproj" />
+  </ItemGroup>
+
+</Project>

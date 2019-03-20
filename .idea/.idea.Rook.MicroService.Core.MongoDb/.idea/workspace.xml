@@ -23,12 +23,7 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba4b975-8916-4de4-8050-ef3cbb997544" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.directory" beforeDir="false" afterPath="$PROJECT_DIR$/.directory" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rook.MicroService.Core.MongoDb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rook.MicroService.Core.MongoDb/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Rook.MicroService.Core.MongoDb.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Rook.MicroService.Core.MongoDb.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="0ba4b975-8916-4de4-8050-ef3cbb997544" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+            <state relative-caret-position="368">
+              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -283,8 +278,10 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="x" value="507" />
+    <option name="y" value="249" />
+    <option name="width" value="1268" />
+    <option name="height" value="714" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -363,12 +360,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552919274823</updated>
-      <workItem from="1552919275976" duration="1197000" />
+      <workItem from="1552919275976" duration="2007000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1197000" />
+    <option name="totallyTimeSpent" value="2007000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -381,12 +378,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Image Layers" />
       <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="JIRA" />
       <window_info anchor="bottom" id="NuGet" weight="0.32941177" />
@@ -396,8 +392,8 @@
       <window_info anchor="bottom" id="TeamCity" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Build" visible="true" weight="0.32941177" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32941177" />
+      <window_info anchor="bottom" id="Build" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -618,8 +614,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+        <state relative-caret-position="368">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
         </state>
       </provider>
     </entry>

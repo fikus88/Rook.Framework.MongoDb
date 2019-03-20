@@ -8,9 +8,9 @@ script:
   - MONTH=$(date +'%m')
   - DAY=$(date +'%d')
   - dotnet build -c Release /p:Version="${YEAR}"."${MONTH}"."${DAY}"."${TRAVIS_BUILD_NUMBER}"
-  - dotnet pack Rook.MicroService.Core.MongoDb/Rook.MicroService.Core.MongoDb.csproj -c Release /p:Version="${YEAR}"."${MONTH}"."${DAY}"."${TRAVIS_BUILD_NUMBER}"
-  - dotnet test Rook.MicroService.Core.MongoDb.Tests.Unit/Rook.MicroService.Core.MongoDb.Tests.Unit.csproj
-  - export NUGET_FILE=$(ls Rook.MicroService.Core.MongoDb/bin/Release/*.nupkg)
+  - dotnet pack Rook.Framework.MongoDb/Rook.Framework.MongoDb.csproj -c Release /p:Version="${YEAR}"."${MONTH}"."${DAY}"."${TRAVIS_BUILD_NUMBER}"
+  - dotnet test Rook.Framework.MongoDb.Tests.Unit/Rook.Framework.MongoDb.Tests.Unit.csproj
+  - export NUGET_FILE=$(ls Rook.Framework.MongoDb/bin/Release/*.nupkg)
   - dotnet nuget push "${NUGET_FILE}" -k "${NUGET_KEY}" -s https://www.nuget.org/
 global:
   - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true

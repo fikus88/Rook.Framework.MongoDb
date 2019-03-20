@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>Microlise.MicroService.Core.MongoDb.ExampleService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="config.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Rook.Framework.Core" Version="2019.3.20.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rook.Framework.MongoDb\Rook.Framework.MongoDb.csproj" />
+  </ItemGroup>
+
+</Project>
