@@ -24,31 +24,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c845f54-dbc0-45a6-9831-fe9c087a45a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rook.MicroService.Core.MongoDb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rook.MicroService.Core.MongoDb/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.ExampleService/MongoAccess.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/MongoAccess.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.ExampleService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.ExampleService/Rook.MicroService.Core.MongoDb.ExampleService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/Rook.Framework.MongoDb.ExampleService.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.ExampleService/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/ContainerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Data/ContainerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/ExpressionExtensionsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Data/ExpressionExtensionsTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Data/MongoStoreTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Data/MongoStoreTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/Rook.MicroService.Core.MongoDb.Tests.Unit.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Rook.Framework.MongoDb.Tests.Unit.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.Tests.Unit/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Data/DataEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/Data/DataEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Data/ExpressionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/Data/ExpressionExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Data/ExpressionModifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/Data/ExpressionModifier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Data/IMongoClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/Data/IMongoClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Data/IMongoStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/Data/IMongoStore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Data/MongoClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/Data/MongoClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Data/MongoIndexAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/Data/MongoIndexAttribute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Data/MongoStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/Data/MongoStore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Health/MongoDbHealthCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/Health/MongoDbHealthCheck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/Rook.MicroService.Core.MongoDb.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/Rook.Framework.MongoDb.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/StructureMap/MongoRegistry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/StructureMap/MongoRegistry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rook.MicroService.Core.MongoDb/TestUtils/MongoStoreTestUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/TestUtils/MongoStoreTestUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rook.Framework.MongoDb/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rook.Framework.MongoDb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rook.Framework.MongoDb/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/Rook.Framework.MongoDb.ExampleService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/Rook.Framework.MongoDb.ExampleService.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Rook.Framework.MongoDb.Tests.Unit.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Rook.Framework.MongoDb.Tests.Unit.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rook.Framework.MongoDb/Rook.Framework.MongoDb.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/Rook.Framework.MongoDb.csproj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,11 +37,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Data/DataEntity.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
+            <state relative-caret-position="594">
               <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
               <folding>
                 <marker date="1553069854204" expanded="false" signature="6:148" ph="..." />
@@ -89,7 +69,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Data/MongoStore.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
+            <state relative-caret-position="126">
               <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding>
                 <marker date="1553069973729" expanded="true" signature="6:274" ph="..." />
@@ -207,7 +187,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
+            <state relative-caret-position="90">
               <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding>
                 <marker date="1553070033296" expanded="true" signature="6:178" ph="..." />
@@ -297,15 +277,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/TestUtils/MongoStoreTestUtils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Data/MongoStore.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/StructureMap/MongoRegistry.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Data/DataEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Data/MongoStoreTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Health/MongoDbHealthCheck.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Data/ContainerTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/MongoAccess.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Health/MongoDbHealthCheck.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Data/DataEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/StructureMap/MongoRegistry.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/TestUtils/MongoStoreTestUtils.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Data/ContainerTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Data/MongoStoreTests.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -345,8 +325,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
-      <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -357,13 +335,15 @@
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Rook.Framework.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="SolutionItems" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Rook.Framework.MongoDb" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -415,12 +395,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553069729339</updated>
-      <workItem from="1553069730422" duration="580000" />
+      <workItem from="1553069730422" duration="1013000" />
+      <workItem from="1553438863738" duration="253000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="580000" />
+    <option name="totallyTimeSpent" value="1266000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -433,23 +414,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1024" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25320512" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="JIRA" />
-      <window_info anchor="bottom" id="NuGet" weight="0.32992035" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="TeamCity" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Build" visible="true" weight="0.32992035" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -457,18 +427,28 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="JIRA" order="7" />
+      <window_info active="true" anchor="bottom" id="NuGet" order="8" visible="true" weight="0.32992035" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="TeamCity" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="15" weight="0.32992035" />
+      <window_info anchor="bottom" id="Terminal" order="16" weight="0.33105803" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Errors In Solution" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -483,7 +463,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Data/DataEntity.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
+        <state relative-caret-position="594">
           <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
           <folding>
             <marker date="1553069854204" expanded="false" signature="6:148" ph="..." />
@@ -509,7 +489,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Data/MongoStore.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
+        <state relative-caret-position="126">
           <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding>
             <marker date="1553069973729" expanded="true" signature="6:274" ph="..." />
@@ -617,7 +597,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
+        <state relative-caret-position="90">
           <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
           <folding>
             <marker date="1553070033296" expanded="true" signature="6:178" ph="..." />
@@ -651,7 +631,6 @@
           <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding>
             <marker date="1553070079707" expanded="true" signature="6:480" ph="..." />
-            <marker date="1553070079707" expanded="true" signature="530:34009" ph="{...}" />
             <marker date="1553070079707" expanded="true" signature="581:34007" ph="{...}" />
             <marker date="1553070079707" expanded="true" signature="885:1324" ph="{...}" />
             <marker date="1553070079707" expanded="true" signature="1562:2077" ph="{...}" />
