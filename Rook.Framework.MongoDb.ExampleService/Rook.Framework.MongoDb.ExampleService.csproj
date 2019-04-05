@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Rook.Framework.Core" Version="2019.3.24.11" />
+    <PackageReference Include="Rook.Framework.Core" Version="2019.4.5.12" />
   </ItemGroup>
 
   <ItemGroup>
