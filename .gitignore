@@ -243,3 +243,7 @@ ModelManifest.xml
 .fake/
 /UpdateNugetPackageVersion.exe.config
 /UpdateNugetPackageVersion.exe
+
+# Rider
+./idea
+**/.idea*/

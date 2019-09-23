@@ -11,6 +11,7 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using Moq;
+using Rook.Framework.Core.AmazonKinesisFirehose;
 using Rook.Framework.MongoDb.Data;
 using Rook.Framework.MongoDb.TestUtils;
 using StructureMap;
@@ -24,6 +25,7 @@ namespace Rook.Framework.MongoDb.Tests.Unit.Data
         private Mock<IConfigurationManager> _configurationManager;
         private Mock<Framework.MongoDb.Data.IMongoClient> _mongoClient;
         private Mock<IContainerFacade> _containerFacade;
+        private Mock<IAmazonFirehoseProducer> _amazonFirehoseProducer;
 
         [TestInitialize]
         public void BeforeEachTest()
@@ -33,9 +35,10 @@ namespace Rook.Framework.MongoDb.Tests.Unit.Data
             _configurationManager.SetupGet(x => x.AppSettings).Returns(new AutoDictionary<string, string> { { "MongoDatabaseUri", "" }, { "MongoDatabaseName", "" } });
             _mongoClient = new Mock<Framework.MongoDb.Data.IMongoClient>();
             _containerFacade = new Mock<IContainerFacade>();
+            _amazonFirehoseProducer = new Mock<IAmazonFirehoseProducer>();
         }
 
-        private MongoStore Sut => new MongoStore(_logger.Object, _configurationManager.Object, _mongoClient.Object, _containerFacade.Object);
+        private MongoStore Sut => new MongoStore(_logger.Object, _configurationManager.Object, _mongoClient.Object, _containerFacade.Object, _amazonFirehoseProducer.Object);
 
         [TestMethod]
         public void MongoStore_WhenInstantiated_CallsMongoClientCreate()
@@ -44,7 +47,7 @@ namespace Rook.Framework.MongoDb.Tests.Unit.Data
             var configurationManager = new Mock<IConfigurationManager>();
             configurationManager.SetupGet(x => x.AppSettings).Returns(new AutoDictionary<string, string> {{"MongoDatabaseUri", ""}, {"MongoDatabaseName", ""}});
             
-            new MongoStore(_logger.Object, _configurationManager.Object, _mongoClient.Object, _containerFacade.Object);
+            new MongoStore(_logger.Object, _configurationManager.Object, _mongoClient.Object, _containerFacade.Object, _amazonFirehoseProducer.Object);
 
             _mongoClient.Verify(x => x.Create(It.IsAny<string>()), Times.Once);
         }

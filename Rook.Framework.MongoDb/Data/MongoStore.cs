@@ -8,6 +8,9 @@ using Rook.Framework.Core.Services;
 using Rook.Framework.Core.StructureMap;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using Rook.Framework.Core.AmazonKinesisFirehose;
+using Rook.Framework.MongoDb.Helpers;
+using JsonConvert = Newtonsoft.Json.JsonConvert;
 
 #pragma warning disable 618
 
@@ -21,6 +24,8 @@ namespace Rook.Framework.MongoDb.Data
         private readonly IMongoClient _client;
         private readonly IContainerFacade _containerFacade;
         internal IMongoDatabase Database;
+        private readonly IAmazonFirehoseProducer _amazonFirehoseProducer;
+        private readonly string _amazonKinesisStreamName;
 
         internal static Dictionary<Type, object> CollectionCache { get; } = new Dictionary<Type, object>();
 
@@ -28,15 +33,16 @@ namespace Rook.Framework.MongoDb.Data
             ILogger logger,
             IConfigurationManager configurationManager,
             IMongoClient mongoClient,
-            IContainerFacade containerFacade)
+            IContainerFacade containerFacade,
+            IAmazonFirehoseProducer amazonFirehoseProducer)
         {
             var databaseUri = configurationManager.Get<string>("MongoDatabaseUri");
             _databaseName = configurationManager.Get<string>("MongoDatabaseName");
-
+            _amazonKinesisStreamName = configurationManager.Get<string>("RepositoryKinesisStream");
             _client = mongoClient;
             _containerFacade = containerFacade;
             _client.Create(databaseUri);
-
+            _amazonFirehoseProducer = new AmazonFirehoseProducer();
             Logger = logger;
         }
         
@@ -208,6 +214,9 @@ namespace Rook.Framework.MongoDb.Data
             if (collection.FindOneAndReplace(o => Equals(o.Id, entityToStore.Id), entityToStore) == null)
             {
                 collection.InsertOne(entityToStore);
+                
+            
+                _amazonFirehoseProducer.PutRecord(_amazonKinesisStreamName, FormatEntity(entityToStore, OperationType.Insert));
                 Logger.Trace($"{nameof(MongoStore)}.{nameof(Put)}",
                     new LogItem("Event", "Insert entity"),
                     new LogItem("Type", typeof(T).ToString),
@@ -227,8 +236,17 @@ namespace Rook.Framework.MongoDb.Data
             DeleteOptions deleteOptions = new DeleteOptions { Collation = collation };
 
             IMongoCollection<T> collection = GetCollection<T>();
-            collection.DeleteMany(filter, deleteOptions);
+           var deleteResult =  collection.DeleteMany(filter, deleteOptions);
             collection.InsertOne(entityToStore);
+
+            if (deleteResult.DeletedCount != 0)
+            {
+                _amazonFirehoseProducer.PutRecord(_amazonKinesisStreamName,
+                    FormatEntity(entityToStore, OperationType.Insert)); 
+            }
+            _amazonFirehoseProducer.PutRecord(_amazonKinesisStreamName,
+                FormatEntity(entityToStore, OperationType.Update)); 
+            
             Logger.Trace($"{nameof(MongoStore)}.{nameof(Put)}",
                 new LogItem("Event", "Insert entity"),
                 new LogItem("Type", typeof(T).ToString),
@@ -317,6 +335,17 @@ namespace Rook.Framework.MongoDb.Data
         public IList<T> GetList<T>(Expression<Func<T, bool>> filter, Collation collation = null) where T : DataEntityBase
         {        
             return Get(filter, collation).ToList();
+        }
+
+        private static string FormatEntity<T>(T entity, OperationType type)
+        {
+            return new
+            {
+                Service = ServiceInfo.Name,
+                OperationType = Enum.GetName(typeof(OperationType), type),
+                Entity = JsonConvert.SerializeObject(entity),
+                Date = DateTime.UtcNow
+            }.ToJson();
         }
     }
 }

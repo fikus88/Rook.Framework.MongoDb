@@ -13,7 +13,7 @@ namespace Rook.Framework.MongoDb.Tests.Unit.Data
         public void Container_GetsAllDataEntityBaseClassesInEntryAssembly()
         {
             var container = new Container(new MicroserviceRegistry(typeof(ContainerTests).Assembly));
-            var result = container.GetAllInstances<DataEntityBase>().ToList();
+            var result = container.GetAllInstances<DataEntity>().ToList();
 
             var containsTestEntity = result.Any(x => x.GetType() == typeof(TestEntity));
             var containsTestObject = result.Any(x => x.GetType() == typeof(TestObject));
