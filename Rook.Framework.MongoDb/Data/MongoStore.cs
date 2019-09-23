@@ -239,14 +239,11 @@ namespace Rook.Framework.MongoDb.Data
            var deleteResult =  collection.DeleteMany(filter, deleteOptions);
             collection.InsertOne(entityToStore);
 
-            if (deleteResult.DeletedCount != 0)
-            {
-                _amazonFirehoseProducer.PutRecord(_amazonKinesisStreamName,
-                    FormatEntity(entityToStore, OperationType.Insert)); 
-            }
             _amazonFirehoseProducer.PutRecord(_amazonKinesisStreamName,
-                FormatEntity(entityToStore, OperationType.Update)); 
-            
+                deleteResult.DeletedCount != 0
+                    ? FormatEntity(entityToStore, OperationType.Insert)
+                    : FormatEntity(entityToStore, OperationType.Update));
+
             Logger.Trace($"{nameof(MongoStore)}.{nameof(Put)}",
                 new LogItem("Event", "Insert entity"),
                 new LogItem("Type", typeof(T).ToString),
