@@ -241,8 +241,8 @@ namespace Rook.Framework.MongoDb.Data
 
             _amazonFirehoseProducer.PutRecord(_amazonKinesisStreamName,
                 deleteResult.DeletedCount != 0
-                    ? FormatEntity(entityToStore, OperationType.Insert)
-                    : FormatEntity(entityToStore, OperationType.Update));
+                    ? FormatEntity(entityToStore, OperationType.Update)
+                    : FormatEntity(entityToStore, OperationType.Insert));
 
             Logger.Trace($"{nameof(MongoStore)}.{nameof(Put)}",
                 new LogItem("Event", "Insert entity"),
