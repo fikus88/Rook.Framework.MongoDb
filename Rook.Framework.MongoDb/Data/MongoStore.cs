@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using Rook.Framework.Core.Common;
 using Rook.Framework.Core.Services;
 using Rook.Framework.Core.StructureMap;
@@ -16,333 +17,352 @@ using JsonConvert = Newtonsoft.Json.JsonConvert;
 
 namespace Rook.Framework.MongoDb.Data
 {
-    public sealed class MongoStore : IMongoStore, IStartable
-    {
-        private readonly string _databaseName;
+	public sealed class MongoStore : IMongoStore, IStartable
+	{
+		private readonly string _databaseName;
 
-        internal readonly ILogger Logger;
-        private readonly IMongoClient _client;
-        private readonly IContainerFacade _containerFacade;
-        internal IMongoDatabase Database;
-        private readonly IAmazonFirehoseProducer _amazonFirehoseProducer;
-        private readonly string _amazonKinesisStreamName;
+		internal readonly ILogger Logger;
+		private readonly IMongoClient _client;
+		private readonly IContainerFacade _containerFacade;
+		internal IMongoDatabase Database;
+		private readonly IAmazonFirehoseProducer _amazonFirehoseProducer;
+		private readonly string _amazonKinesisStreamName;
 
-        internal static Dictionary<Type, object> CollectionCache { get; } = new Dictionary<Type, object>();
+		internal static Dictionary<Type, object> CollectionCache { get; } = new Dictionary<Type, object>();
 
-        public MongoStore(
-            ILogger logger,
-            IConfigurationManager configurationManager,
-            IMongoClient mongoClient,
-            IContainerFacade containerFacade,
-            IAmazonFirehoseProducer amazonFirehoseProducer)
-        {
-            var databaseUri = configurationManager.Get<string>("MongoDatabaseUri");
-            _databaseName = configurationManager.Get<string>("MongoDatabaseName");
-            _amazonKinesisStreamName = configurationManager.Get<string>("RepositoryKinesisStream");
-            _client = mongoClient;
-            _containerFacade = containerFacade;
-            _client.Create(databaseUri);
-            _amazonFirehoseProducer = new AmazonFirehoseProducer();
-            Logger = logger;
-        }
-        
-        public StartupPriority StartupPriority { get; } = StartupPriority.Highest;
-        public void Start()
-        {
-            var dataEntities = _containerFacade.GetAllInstances<DataEntityBase>();
-            foreach (var dataEntity in dataEntities)
-            {
-                var method = typeof(MongoStore).GetMethod(nameof(GetOrCreateCollection), BindingFlags.NonPublic | BindingFlags.Instance);
-                method.MakeGenericMethod(dataEntity.GetType()).Invoke(this, new object[] { });
-            }
-        }
+		public MongoStore(
+			ILogger logger,
+			IConfigurationManager configurationManager,
+			IMongoClient mongoClient,
+			IContainerFacade containerFacade,
+			IAmazonFirehoseProducer amazonFirehoseProducer)
+		{
+			var databaseUri = configurationManager.Get<string>("MongoDatabaseUri");
+			_databaseName = configurationManager.Get<string>("MongoDatabaseName");
+			_amazonKinesisStreamName = configurationManager.Get<string>("RepositoryKinesisStream");
+			_client = mongoClient;
+			_containerFacade = containerFacade;
+			_client.Create(databaseUri);
+			_amazonFirehoseProducer = new AmazonFirehoseProducer();
+			Logger = logger;
+		}
 
-        internal void Connect()
-        {
-            if (Database == null)
-                Database = _client.GetDatabase(_databaseName);
-        }
+		public StartupPriority StartupPriority { get; } = StartupPriority.Highest;
 
-        /// <summary>
-        /// Gets an IQueryable collection of the DataEntity requested. If the collection does not already exist, it will be created.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
-        public IQueryable<T> QueryableCollection<T>() where T : DataEntityBase
-        {
-            Logger.Trace($"{nameof(MongoStore)}.{nameof(QueryableCollection)}",
-                new LogItem("Event", "Get collection as queryable"), new LogItem("Type", typeof(T).ToString));
-            return GetCollection<T>().AsQueryable();
-        }
+		public void Start()
+		{
+			var dataEntities = _containerFacade.GetAllInstances<DataEntityBase>();
+			foreach (var dataEntity in dataEntities)
+			{
+				var method = typeof(MongoStore).GetMethod(nameof(GetOrCreateCollection),
+					BindingFlags.NonPublic | BindingFlags.Instance);
+				method.MakeGenericMethod(dataEntity.GetType()).Invoke(this, new object[] { });
+			}
+		}
 
-        /// <summary>
-        /// Gets the Mongo collection of the DataEntity requested. If the collection does not already exist, it will be created.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
-        public IMongoCollection<T> GetCollection<T>() where T : DataEntityBase
-        {
-            lock (CollectionCache)
-            {
-                if (!CollectionCache.ContainsKey(typeof(T)))
-                {
-                    Logger.Trace($"{nameof(MongoStore)}.{nameof(GetCollection)}<{typeof(T).Name}>",
-                        new LogItem("Action", "Not cached, call GetOrCreateCollection"));
-                    GetOrCreateCollection<T>();
-                }
+		internal void Connect()
+		{
+			if (Database == null)
+				Database = _client.GetDatabase(_databaseName);
+		}
 
-                return (IMongoCollection<T>)CollectionCache[typeof(T)];
-            }
-        }
+		/// <summary>
+		/// Gets an IQueryable collection of the DataEntity requested. If the collection does not already exist, it will be created.
+		/// </summary>
+		/// <typeparam name="T"></typeparam>
+		/// <returns></returns>
+		public IQueryable<T> QueryableCollection<T>() where T : DataEntityBase
+		{
+			Logger.Trace($"{nameof(MongoStore)}.{nameof(QueryableCollection)}",
+				new LogItem("Event", "Get collection as queryable"), new LogItem("Type", typeof(T).ToString));
+			return GetCollection<T>().AsQueryable();
+		}
 
-        /// <summary>
-        /// Returns the number of items of the requested type in the Mongo collection.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
-        public long Count<T>() where T : DataEntityBase
-        {
-            Logger.Trace($"{nameof(MongoStore)}.{nameof(Count)}",
-                new LogItem("Event", "Get collection count"), new LogItem("Type", typeof(T).ToString));
-            return GetCollection<T>().Count(arg => true);
-        }
+		/// <summary>
+		/// Gets the Mongo collection of the DataEntity requested. If the collection does not already exist, it will be created.
+		/// </summary>
+		/// <typeparam name="T"></typeparam>
+		/// <returns></returns>
+		public IMongoCollection<T> GetCollection<T>() where T : DataEntityBase
+		{
+			lock (CollectionCache)
+			{
+				if (!CollectionCache.ContainsKey(typeof(T)))
+				{
+					Logger.Trace($"{nameof(MongoStore)}.{nameof(GetCollection)}<{typeof(T).Name}>",
+						new LogItem("Action", "Not cached, call GetOrCreateCollection"));
+					GetOrCreateCollection<T>();
+				}
 
-        /// <summary>
-        /// Returns the number of items of the requested type in the Mongo collection filtered by the given expression.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
-        public long Count<T>(Expression<Func<T, bool>> expression, Collation collation = null) where T : DataEntityBase
-        {
-            CountOptions countOptions = new CountOptions() { Collation = collation };
+				return (IMongoCollection<T>) CollectionCache[typeof(T)];
+			}
+		}
 
-            Logger.Trace($"{nameof(MongoStore)}.{nameof(Count)}",
-                new LogItem("Event", "Get collection count"), new LogItem("Type", typeof(T).ToString), new LogItem("Expression", expression.ToString));
-            return GetCollection<T>().Count(expression, countOptions);
-        }
+		/// <summary>
+		/// Returns the number of items of the requested type in the Mongo collection.
+		/// </summary>
+		/// <typeparam name="T"></typeparam>
+		/// <returns></returns>
+		public long Count<T>() where T : DataEntityBase
+		{
+			Logger.Trace($"{nameof(MongoStore)}.{nameof(Count)}",
+				new LogItem("Event", "Get collection count"), new LogItem("Type", typeof(T).ToString));
+			return GetCollection<T>().Count(arg => true);
+		}
 
-        public IEnumerable<TField> Distinct<TField, TCollection>(Expression<Func<TCollection, TField>> fieldSelector, FilterDefinition<TCollection> filterDefinition, Collation collation = null) where TCollection : DataEntityBase
-        {
-            IMongoCollection<TCollection> collection = GetCollection<TCollection>();
+		/// <summary>
+		/// Returns the number of items of the requested type in the Mongo collection filtered by the given expression.
+		/// </summary>
+		/// <typeparam name="T"></typeparam>
+		/// <returns></returns>
+		public long Count<T>(Expression<Func<T, bool>> expression, Collation collation = null) where T : DataEntityBase
+		{
+			CountOptions countOptions = new CountOptions() {Collation = collation};
 
-            Logger.Trace($"{nameof(MongoStore)}.{nameof(Distinct)}",
-                new LogItem("Event", "Get distinct"),
-                new LogItem("FieldType", typeof(TField).ToString),
-                new LogItem("CollectionType", typeof(TCollection).ToString),
-                new LogItem("FieldSelector", fieldSelector.ToString),
-                new LogItem("FilterDefinition", filterDefinition.ToString));
+			Logger.Trace($"{nameof(MongoStore)}.{nameof(Count)}",
+				new LogItem("Event", "Get collection count"), new LogItem("Type", typeof(T).ToString),
+				new LogItem("Expression", expression.ToString));
+			return GetCollection<T>().Count(expression, countOptions);
+		}
 
-            DistinctOptions distinctOptions = new DistinctOptions() { Collation = collation };
+		public IEnumerable<TField> Distinct<TField, TCollection>(Expression<Func<TCollection, TField>> fieldSelector,
+			FilterDefinition<TCollection> filterDefinition, Collation collation = null)
+			where TCollection : DataEntityBase
+		{
+			IMongoCollection<TCollection> collection = GetCollection<TCollection>();
 
-            using (IAsyncCursor<TField> cursor = collection.Distinct(fieldSelector, filterDefinition, distinctOptions))
-                foreach (TField p in IterateCursor(cursor)) yield return p;
-        }
+			Logger.Trace($"{nameof(MongoStore)}.{nameof(Distinct)}",
+				new LogItem("Event", "Get distinct"),
+				new LogItem("FieldType", typeof(TField).ToString),
+				new LogItem("CollectionType", typeof(TCollection).ToString),
+				new LogItem("FieldSelector", fieldSelector.ToString),
+				new LogItem("FilterDefinition", filterDefinition.ToString));
 
-        private void GetOrCreateCollection<T>()
-        {
-            Connect();
+			DistinctOptions distinctOptions = new DistinctOptions() {Collation = collation};
 
-            string collectionName = typeof(T).Name;
+			using (IAsyncCursor<TField> cursor = collection.Distinct(fieldSelector, filterDefinition, distinctOptions))
+				foreach (TField p in IterateCursor(cursor))
+					yield return p;
+		}
 
-            Logger.Trace($"{nameof(MongoStore)}.{nameof(GetOrCreateCollection)}<{typeof(T).Name}>",
-                new LogItem("Event", "Mongo GetCollection"));
+		private void GetOrCreateCollection<T>()
+		{
+			Connect();
 
-            IMongoCollection<T> collection = Database.GetCollection<T>(collectionName);
+			string collectionName = typeof(T).Name;
 
-            Dictionary<string, List<string>> indexes =
-                new Dictionary<string, List<string>> { { "ExpiresAt", new List<string> { "ExpiresAt" } } };
+			Logger.Trace($"{nameof(MongoStore)}.{nameof(GetOrCreateCollection)}<{typeof(T).Name}>",
+				new LogItem("Event", "Mongo GetCollection"));
 
-            PropertyInfo[] members = typeof(T).GetProperties();
-            foreach (PropertyInfo memberInfo in members)
-            {
-                MongoIndexAttribute indexAttribute = memberInfo.GetCustomAttribute<MongoIndexAttribute>();
-                if (indexAttribute == null) continue;
-                if (!indexes.ContainsKey(indexAttribute.IndexName))
-                    indexes.Add(indexAttribute.IndexName, new List<string>());
-                indexes[indexAttribute.IndexName].Add(memberInfo.Name);
-            }
+			IMongoCollection<T> collection = Database.GetCollection<T>(collectionName);
 
-            IMongoIndexManager<T> indexManager = collection.Indexes;
-            foreach (KeyValuePair<string, List<string>> index in indexes)
-            {
-                bool indexExists = false;
+			Dictionary<string, List<string>> indexes =
+				new Dictionary<string, List<string>> {{"ExpiresAt", new List<string> {"ExpiresAt"}}};
 
-                using (IAsyncCursor<BsonDocument> asyncCursor = indexManager.List())
-                    while (asyncCursor.MoveNext() && !indexExists)
-                    {
-                        indexExists = CheckIndexExists(asyncCursor, index);
-                    }
-                if (!indexExists)
-                {
-                    string indexJson = $"{{{string.Join(",", index.Value.Select(field => $"\"{field}\":1"))}}}";
-                    Logger.Trace($"{nameof(MongoStore)}.{nameof(GetOrCreateCollection)}<{typeof(T).Name}>", new LogItem("Action", $"Create ExpiresAt index"));
+			PropertyInfo[] members = typeof(T).GetProperties();
+			foreach (PropertyInfo memberInfo in members)
+			{
+				MongoIndexAttribute indexAttribute = memberInfo.GetCustomAttribute<MongoIndexAttribute>();
+				if (indexAttribute == null) continue;
+				if (!indexes.ContainsKey(indexAttribute.IndexName))
+					indexes.Add(indexAttribute.IndexName, new List<string>());
+				indexes[indexAttribute.IndexName].Add(memberInfo.Name);
+			}
 
-                    CreateIndexOptions cio = new CreateIndexOptions { Name = index.Key };
-                    if (index.Key == "ExpiresAt") cio.ExpireAfter = TimeSpan.Zero;
+			IMongoIndexManager<T> indexManager = collection.Indexes;
+			foreach (KeyValuePair<string, List<string>> index in indexes)
+			{
+				bool indexExists = false;
 
-                    indexManager.CreateOne(new JsonIndexKeysDefinition<T>(indexJson), cio);
-                }
-            }
+				using (IAsyncCursor<BsonDocument> asyncCursor = indexManager.List())
+					while (asyncCursor.MoveNext() && !indexExists)
+					{
+						indexExists = CheckIndexExists(asyncCursor, index);
+					}
 
-            CollectionCache.Add(typeof(T), collection);
-        }
+				if (!indexExists)
+				{
+					string indexJson = $"{{{string.Join(",", index.Value.Select(field => $"\"{field}\":1"))}}}";
+					Logger.Trace($"{nameof(MongoStore)}.{nameof(GetOrCreateCollection)}<{typeof(T).Name}>",
+						new LogItem("Action", $"Create ExpiresAt index"));
 
-        private static bool CheckIndexExists(IAsyncCursor<BsonDocument> asyncCursor, KeyValuePair<string, List<string>> index)
-        {
-            bool indexExists = false;
-            IEnumerable<BsonDocument> asyncCursorCurrent = asyncCursor.Current;
-            foreach (BsonDocument bsonDocument in asyncCursorCurrent)
-            {
-                indexExists = bsonDocument["key"].AsBsonDocument.Elements
-                    .All(e => index.Value.Contains(e.Name));
+					CreateIndexOptions cio = new CreateIndexOptions {Name = index.Key};
+					if (index.Key == "ExpiresAt") cio.ExpireAfter = TimeSpan.Zero;
 
-                if (indexExists) break;
-            }
+					indexManager.CreateOne(new JsonIndexKeysDefinition<T>(indexJson), cio);
+				}
+			}
 
-            return indexExists;
-        }
+			CollectionCache.Add(typeof(T), collection);
+		}
 
-        /// <summary>
-        /// Puts the given DataEntity into its corresponding Mongo collection
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="entityToStore"></param>
-        public void Put<T>(T entityToStore) where T : DataEntityBase
-        {
-            IMongoCollection<T> collection = GetCollection<T>();
+		private static bool CheckIndexExists(IAsyncCursor<BsonDocument> asyncCursor,
+			KeyValuePair<string, List<string>> index)
+		{
+			bool indexExists = false;
+			IEnumerable<BsonDocument> asyncCursorCurrent = asyncCursor.Current;
+			foreach (BsonDocument bsonDocument in asyncCursorCurrent)
+			{
+				indexExists = bsonDocument["key"].AsBsonDocument.Elements
+					.All(e => index.Value.Contains(e.Name));
 
-            if (collection.FindOneAndReplace(o => Equals(o.Id, entityToStore.Id), entityToStore) == null)
-            {
-                collection.InsertOne(entityToStore);
-                
-            
-                _amazonFirehoseProducer.PutRecord(_amazonKinesisStreamName, FormatEntity(entityToStore, OperationType.Insert));
-                Logger.Trace($"{nameof(MongoStore)}.{nameof(Put)}",
-                    new LogItem("Event", "Insert entity"),
-                    new LogItem("Type", typeof(T).ToString),
-                    new LogItem("Entity", entityToStore.ToString));
-            }
-        }
+				if (indexExists) break;
+			}
 
-        /// <summary>
-        /// Replaces all items matching the filter with the given DataEntity in the corresponding Mongo collection
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="entityToStore"></param>
-        /// <param name="filter"></param>
-        /// <param name="collation"></param>
-        public void Put<T>(T entityToStore, Expression<Func<T, bool>> filter, Collation collation = null) where T : DataEntityBase
-        {
-            DeleteOptions deleteOptions = new DeleteOptions { Collation = collation };
+			return indexExists;
+		}
 
-            IMongoCollection<T> collection = GetCollection<T>();
-           var deleteResult =  collection.DeleteMany(filter, deleteOptions);
-            collection.InsertOne(entityToStore);
+		/// <summary>
+		/// Puts the given DataEntity into its corresponding Mongo collection
+		/// </summary>
+		/// <typeparam name="T"></typeparam>
+		/// <param name="entityToStore"></param>
+		public void Put<T>(T entityToStore) where T : DataEntityBase
+		{
+			IMongoCollection<T> collection = GetCollection<T>();
 
-            _amazonFirehoseProducer.PutRecord(_amazonKinesisStreamName,
-                deleteResult.DeletedCount != 0
-                    ? FormatEntity(entityToStore, OperationType.Update)
-                    : FormatEntity(entityToStore, OperationType.Insert));
+			if (collection.FindOneAndReplace(o => Equals(o.Id, entityToStore.Id), entityToStore) == null)
+			{
+				collection.InsertOne(entityToStore);
 
-            Logger.Trace($"{nameof(MongoStore)}.{nameof(Put)}",
-                new LogItem("Event", "Insert entity"),
-                new LogItem("Type", typeof(T).ToString),
-                new LogItem("Entity", entityToStore.ToString),
-                new LogItem("Filter", filter.Body.ToString));
-        }
+				_amazonFirehoseProducer.PutRecord(_amazonKinesisStreamName,
+					FormatEntity(entityToStore, OperationType.Insert));
+				Logger.Trace($"{nameof(MongoStore)}.{nameof(Put)}",
+					new LogItem("Event", "Insert entity"),
+					new LogItem("Type", typeof(T).ToString),
+					new LogItem("Entity", entityToStore.ToString));
+			}
+		}
 
-        public void Update<T>(Expression<Func<T, bool>> filter, UpdateDefinition<T> updates, Collation collation = null) where T : DataEntityBase
-        {
-            UpdateOptions updateOptions = new UpdateOptions() { Collation = collation };
+		/// <summary>
+		/// Replaces all items matching the filter with the given DataEntity in the corresponding Mongo collection
+		/// </summary>
+		/// <typeparam name="T"></typeparam>
+		/// <param name="entityToStore"></param>
+		/// <param name="filter"></param>
+		/// <param name="collation"></param>
+		public void Put<T>(T entityToStore, Expression<Func<T, bool>> filter, Collation collation = null)
+			where T : DataEntityBase
+		{
+			DeleteOptions deleteOptions = new DeleteOptions {Collation = collation};
 
-            IMongoCollection<T> collection = GetCollection<T>();
-            collection.UpdateMany(filter, updates, updateOptions);
-            Logger.Trace($"{nameof(MongoStore)}.{nameof(Update)}",
-                new LogItem("Event", "Update collection"),
-                new LogItem("Type", typeof(T).ToString),
-                new LogItem("Filter", filter.ToString),
-                new LogItem("UpdateDefinition", updates.ToString));
-        }
+			IMongoCollection<T> collection = GetCollection<T>();
+			var deleteResult = collection.DeleteMany(filter, deleteOptions);
+			collection.InsertOne(entityToStore);
 
-        public void Remove<T>(object id) where T : DataEntityBase
-        {
-            IMongoCollection<T> collection = GetCollection<T>();
-            collection.DeleteOne(o => o.Id.Equals(id));
-            Logger.Trace($"{nameof(MongoStore)}.{nameof(Remove)}",
-                new LogItem("Event", "Remove entity"),
-                new LogItem("Type", typeof(T).ToString),
-                new LogItem("Id", id.ToString));
-        }
+			_amazonFirehoseProducer.PutRecord(_amazonKinesisStreamName,
+				deleteResult.DeletedCount != 0
+					? FormatEntity(entityToStore, OperationType.Update)
+					: FormatEntity(entityToStore, OperationType.Insert));
 
-        public void RemoveEntity<T>(T entityToRemove) where T : DataEntityBase
-        {
-            Remove<T>(entityToRemove.Id);
-        }
+			Logger.Trace($"{nameof(MongoStore)}.{nameof(Put)}",
+				new LogItem("Event", "Insert entity"),
+				new LogItem("Type", typeof(T).ToString),
+				new LogItem("Entity", entityToStore.ToString),
+				new LogItem("Filter", filter.Body.ToString));
+		}
 
-        public void Remove<T>(Expression<Func<T, bool>> filter, Collation collation = null) where T : DataEntityBase
-        {
-            DeleteOptions deleteOptions = new DeleteOptions() { Collation = collation };
+		public void Update<T>(Expression<Func<T, bool>> filter, UpdateDefinition<T> updates, Collation collation = null)
+			where T : DataEntityBase
+		{
+			UpdateOptions updateOptions = new UpdateOptions() {Collation = collation};
 
-            IMongoCollection<T> collection = GetCollection<T>();
-            collection.DeleteMany(filter, deleteOptions);
-            Logger.Trace($"{nameof(MongoStore)}.{nameof(Remove)}",
-                new LogItem("Event", "Remove entity"),
-                new LogItem("Type", typeof(T).ToString),
-                new LogItem("Filter", filter.ToString));
-        }
+			IMongoCollection<T> collection = GetCollection<T>();
+			collection.UpdateMany(filter, updates, updateOptions);
+			Logger.Trace($"{nameof(MongoStore)}.{nameof(Update)}",
+				new LogItem("Event", "Update collection"),
+				new LogItem("Type", typeof(T).ToString),
+				new LogItem("Filter", filter.ToString),
+				new LogItem("UpdateDefinition", updates.ToString));
+		}
 
-        public T Get<T>(object id) where T : DataEntityBase
-        {
-            IMongoCollection<T> collection = GetCollection<T>();
+		public void Remove<T>(object id) where T : DataEntityBase
+		{
+			IMongoCollection<T> collection = GetCollection<T>();
+			collection.DeleteOne(o => o.Id.Equals(id));
+			Logger.Trace($"{nameof(MongoStore)}.{nameof(Remove)}",
+				new LogItem("Event", "Remove entity"),
+				new LogItem("Type", typeof(T).ToString),
+				new LogItem("Id", id.ToString));
+		}
 
-            using (IAsyncCursor<T> cursor = collection.FindSync(o => Equals(id, o.Id)))
-            {
-                cursor.MoveNext();
-                Logger.Trace($"{nameof(MongoStore)}.{nameof(Get)}",
-                    new LogItem("Event", "Get entity"),
-                    new LogItem("Type", typeof(T).ToString),
-                    new LogItem("Id", id.ToString));
-                return cursor.Current.FirstOrDefault();
-            }
-        }
+		public void RemoveEntity<T>(T entityToRemove) where T : DataEntityBase
+		{
+			Remove<T>(entityToRemove.Id);
+		}
 
-        public IEnumerable<T> Get<T>(Expression<Func<T, bool>> filter, Collation collation = null) where T : DataEntityBase
-        {
-            IMongoCollection<T> collection = GetCollection<T>();
+		public void Remove<T>(Expression<Func<T, bool>> filter, Collation collation = null) where T : DataEntityBase
+		{
+			DeleteOptions deleteOptions = new DeleteOptions() {Collation = collation};
 
-            FindOptions<T, T> findOptions = new FindOptions<T, T> { Collation = collation };
+			IMongoCollection<T> collection = GetCollection<T>();
+			collection.DeleteMany(filter, deleteOptions);
+			Logger.Trace($"{nameof(MongoStore)}.{nameof(Remove)}",
+				new LogItem("Event", "Remove entity"),
+				new LogItem("Type", typeof(T).ToString),
+				new LogItem("Filter", filter.ToString));
+		}
 
-            using (IAsyncCursor<T> cursor = collection.FindSync(filter, findOptions))
-                foreach (T p in IterateCursor(cursor)) yield return p;
-        }
+		public T Get<T>(object id) where T : DataEntityBase
+		{
+			IMongoCollection<T> collection = GetCollection<T>();
 
-        public bool Ping()
-        {
-            Connect();
-            return Database.RunCommandAsync((Command<BsonDocument>)"{ping:1}").Wait(1000);
-        }
+			using (IAsyncCursor<T> cursor = collection.FindSync(o => Equals(id, o.Id)))
+			{
+				cursor.MoveNext();
+				Logger.Trace($"{nameof(MongoStore)}.{nameof(Get)}",
+					new LogItem("Event", "Get entity"),
+					new LogItem("Type", typeof(T).ToString),
+					new LogItem("Id", id.ToString));
+				return cursor.Current.FirstOrDefault();
+			}
+		}
 
-        private static IEnumerable<T> IterateCursor<T>(IAsyncCursor<T> cursor)
-        {
-            while (cursor != null && cursor.MoveNext())
-                foreach (T obj in cursor.Current)
-                    yield return obj;
-        }
+		public IEnumerable<T> Get<T>(Expression<Func<T, bool>> filter, Collation collation = null)
+			where T : DataEntityBase
+		{
+			IMongoCollection<T> collection = GetCollection<T>();
 
-        public IList<T> GetList<T>(Expression<Func<T, bool>> filter, Collation collation = null) where T : DataEntityBase
-        {        
-            return Get(filter, collation).ToList();
-        }
+			FindOptions<T, T> findOptions = new FindOptions<T, T> {Collation = collation};
 
-        private static string FormatEntity<T>(T entity, OperationType type)
-        {
-            return new
-            {
-                Service = ServiceInfo.Name,
-                OperationType = Enum.GetName(typeof(OperationType), type),
-                Entity = JsonConvert.SerializeObject(entity),
-                Date = DateTime.UtcNow
-            }.ToJson();
-        }
-    }
+			using (IAsyncCursor<T> cursor = collection.FindSync(filter, findOptions))
+				foreach (T p in IterateCursor(cursor))
+					yield return p;
+		}
+
+		public bool Ping()
+		{
+			Connect();
+			return Database.RunCommandAsync((Command<BsonDocument>) "{ping:1}").Wait(1000);
+		}
+
+		private static IEnumerable<T> IterateCursor<T>(IAsyncCursor<T> cursor)
+		{
+			while (cursor != null && cursor.MoveNext())
+				foreach (T obj in cursor.Current)
+					yield return obj;
+		}
+
+		public IList<T> GetList<T>(Expression<Func<T, bool>> filter, Collation collation = null)
+			where T : DataEntityBase
+		{
+			return Get(filter, collation).ToList();
+		}
+
+		private static string FormatEntity<T>(T entity, OperationType type)
+		{
+			var regex = new Regex("ISODate[(](.+?)[)]");
+
+			var result = new
+			{
+				Service = ServiceInfo.Name,
+				OperationType = Enum.GetName(typeof(OperationType), type),
+				Entity = JsonConvert.SerializeObject(entity),
+				EntityType = typeof(T).Name,
+				Date = DateTime.UtcNow
+			}.ToJson();
+
+			return regex.Replace(result, "$1");
+		}
+	}
 }
