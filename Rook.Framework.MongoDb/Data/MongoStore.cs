@@ -43,8 +43,8 @@ namespace Rook.Framework.MongoDb.Data
 			_client = mongoClient;
 			_containerFacade = containerFacade;
 			_client.Create(databaseUri);
-			_amazonFirehoseProducer = new AmazonFirehoseProducer();
 			Logger = logger;
+			_amazonFirehoseProducer = new AmazonFirehoseProducer(logger);
 		}
 
 		public StartupPriority StartupPriority { get; } = StartupPriority.Highest;

@@ -25,7 +25,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6c845f54-dbc0-45a6-9831-fe9c087a45a9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rook.Framework.MongoDb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rook.Framework.MongoDb/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/Rook.Framework.MongoDb.ExampleService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/Rook.Framework.MongoDb.ExampleService.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Rook.Framework.MongoDb.Tests.Unit.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Rook.Framework.MongoDb.Tests.Unit.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rook.Framework.MongoDb/Data/MongoStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/Data/MongoStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rook.Framework.MongoDb/Rook.Framework.MongoDb.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Rook.Framework.MongoDb/Rook.Framework.MongoDb.csproj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,24 +47,29 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Data/ContainerTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Data/MongoStoreTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/MongoAccess.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A1093C49-8084-4E02-B655-D0354764EC83/ea/7133026c/IMongoCollection`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Data/MongoStore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Data/DataEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Data/IMongoStore.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Helpers/OperationType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Helpers/OperationType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/MongoAccess.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96270E3C-F200-4896-833F-D3076BA17A1E/10/268d89aa/IAmazonFirehoseProducer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6660F819-7A9A-46FF-A385-02F2BEA080C1/9e/95710dea/IAmazonFirehoseProducer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/40637A32-C95E-4EED-A946-0EF3E351121D/2c/98297688/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6660F819-7A9A-46FF-A385-02F2BEA080C1/2f/4bd34f51/AmazonFirehoseProducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Health/MongoDbHealthCheck.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98F60ED0-D4BE-4003-B162-52611123BFAF/3c/001ab5bf/IAmazonKinesisFirehose.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/StructureMap/MongoRegistry.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/TestUtils/MongoStoreTestUtils.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Data/MongoIndexAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Data/MongoIndexAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E2AAF7BC-0582-4761-807E-F2E00BC3E512/f7/060d3b97/IAmazonFirehoseProducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Rook.Framework.MongoDb/Data/MongoClient.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A1093C49-8084-4E02-B655-D0354764EC83/21/9b6d706f/DeleteResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E2AAF7BC-0582-4761-807E-F2E00BC3E512/82/813516db/AmazonFirehoseProducer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -70,14 +78,16 @@
         <option value="$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/MongoAccess.cs" />
         <option value="$PROJECT_DIR$/Rook.Framework.MongoDb.ExampleService/Program.cs" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/Rook.Framework.MongoDb/Rook.Framework.MongoDb.csproj" />
         <option value="$PROJECT_DIR$/Rook.Framework.MongoDb/StructureMap/MongoRegistry.cs" />
         <option value="$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Data/ContainerTests.cs" />
         <option value="$PROJECT_DIR$/Rook.Framework.MongoDb/TestUtils/MongoStoreTestUtils.cs" />
         <option value="$PROJECT_DIR$/Rook.Framework.MongoDb/Helpers/OperationType.cs" />
         <option value="$PROJECT_DIR$/Rook.Framework.MongoDb.Tests.Unit/Data/MongoStoreTests.cs" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6660F819-7A9A-46FF-A385-02F2BEA080C1/9e/95710dea/IAmazonFirehoseProducer.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6660F819-7A9A-46FF-A385-02F2BEA080C1/2f/4bd34f51/AmazonFirehoseProducer.cs" />
         <option value="$PROJECT_DIR$/Rook.Framework.MongoDb/Data/MongoStore.cs" />
+        <option value="$PROJECT_DIR$/Rook.Framework.MongoDb/Rook.Framework.MongoDb.csproj" />
       </list>
     </option>
   </component>
@@ -153,7 +163,11 @@
       <workItem from="1568980475164" duration="722000" />
       <workItem from="1569230844055" duration="10024000" />
       <workItem from="1569254278790" duration="3506000" />
-      <workItem from="1569261527631" duration="2893000" />
+      <workItem from="1569261527631" duration="6287000" />
+      <workItem from="1569332506856" duration="1362000" />
+      <workItem from="1569408335312" duration="6223000" />
+      <workItem from="1569589940615" duration="924000" />
+      <workItem from="1569917274677" duration="257000" />
     </task>
     <task id="LOCAL-00001" summary="implemented firehose">
       <created>1569261968467</created>
@@ -176,7 +190,28 @@
       <option name="project" value="LOCAL" />
       <updated>1569266269916</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="version update, reversed logic">
+      <created>1569312065128</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569312065128</updated>
+    </task>
+    <task id="LOCAL-00005" summary="version update, reversed logic">
+      <created>1569312075967</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569312075967</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updated package">
+      <created>1569574783861</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569574783861</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +236,9 @@
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
     <MESSAGE value="implemented firehose" />
     <MESSAGE value="version update" />
-    <option name="LAST_COMMIT_MESSAGE" value="version update" />
+    <MESSAGE value="version update, reversed logic" />
+    <MESSAGE value="updated package" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated package" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
