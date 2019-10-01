@@ -7,12 +7,12 @@
     <Company>Rook Framework</Company>
     <Description>MogoDB functionality for rook services</Description>
     
-    <AssemblyVersion>2017.11.28.2</AssemblyVersion>
-    <FileVersion>2017.11.28.2</FileVersion>
+    <AssemblyVersion>2019.10.1.7</AssemblyVersion>
+    <FileVersion>2019.10.1.7</FileVersion>
 
     <LangVersion>7.1</LangVersion>
     <ProjectGuid>81DA76FE-0E70-49E0-AE32-359AAA33C40B</ProjectGuid>
-    <PackageVersion></PackageVersion>
+    <PackageVersion>2019.10.1.7</PackageVersion>
     <Title>Rook.Framework.MongoDb</Title>
     <PackageProjectUrl>https://github.com/rookframework/Rook.Documentation</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/rookframework/Rook.Framework.MongoDb/blob/master/LICENSE     </PackageLicenseUrl>
@@ -20,6 +20,7 @@
     <RepositoryUrl>https://github.com/rookframework/Rook.Framework.MongoDb</RepositoryUrl>
     <RepositoryType>Github</RepositoryType>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -27,8 +28,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MongoDB.Driver" Version="2.6.1" />
-    <PackageReference Include="Rook.Framework.Core" Version="2019.4.5.12" />
+    <PackageReference Include="MAB.Rook.Framework.Core" Version="2019.10.1.62" />
+    <PackageReference Include="MongoDB.Driver" Version="2.9.1" />
   </ItemGroup>
 
 </Project>

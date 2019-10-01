@@ -15,7 +15,7 @@ namespace Rook.Framework.MongoDb.StructureMap
             Scan(scan =>
             {
                 scan.Assembly(assmebly);
-                scan.AddAllTypesOf<DataEntityBase>();
+                scan.AddAllTypesOf<DataEntity>();
             });
 
             For<IStartable>().Add<MongoStore>();
