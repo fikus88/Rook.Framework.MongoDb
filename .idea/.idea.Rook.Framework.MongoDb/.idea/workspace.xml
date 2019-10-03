@@ -23,7 +23,9 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c845f54-dbc0-45a6-9831-fe9c087a45a9" name="Default Changelist" comment="" />
+    <list default="true" id="6c845f54-dbc0-45a6-9831-fe9c087a45a9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rook.Framework.MongoDb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rook.Framework.MongoDb/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +163,7 @@
       <workItem from="1569332506856" duration="1362000" />
       <workItem from="1569408335312" duration="6223000" />
       <workItem from="1569589940615" duration="924000" />
-      <workItem from="1569917274677" duration="512000" />
+      <workItem from="1569917274677" duration="2573000" />
     </task>
     <task id="LOCAL-00001" summary="implemented firehose">
       <created>1569261968467</created>
@@ -219,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569917766260</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="final package update">
+      <created>1569917855762</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569917855762</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
