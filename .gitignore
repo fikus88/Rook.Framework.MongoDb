@@ -243,3 +243,12 @@ ModelManifest.xml
 .fake/
 /UpdateNugetPackageVersion.exe.config
 /UpdateNugetPackageVersion.exe
+
+# Rider
+/.idea/
+**/.idea*/
+/.idea/~
+/.idea/.idea.MAB.MicroService.Core.MongoDb/
+/.idea/.idea.Microlise.MicroService.Core.MongoDb/
+/.idea/.idea.Rook.Framework.MongoDb/
+/.idea/.idea.Rook.MicroService.Core.MongoDb/
