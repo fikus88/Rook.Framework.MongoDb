@@ -245,5 +245,5 @@ ModelManifest.xml
 /UpdateNugetPackageVersion.exe
 
 # Rider
-./idea
+/.idea/**
 **/.idea*/
