@@ -39,7 +39,15 @@ namespace Rook.Framework.MongoDb.Data
 		{
 			var databaseUri = configurationManager.Get<string>("MongoDatabaseUri");
 			_databaseName = configurationManager.Get<string>("MongoDatabaseName");
-			_amazonKinesisStreamName = configurationManager.Get<string>("RepositoryKinesisStream");
+			
+			try
+			{
+				_amazonKinesisStreamName = configurationManager.Get<string>("RepositoryKinesisStream");
+			}
+			catch
+			{
+				_amazonKinesisStreamName = null;
+			}
 			_client = mongoClient;
 			_containerFacade = containerFacade;
 			_client.Create(databaseUri);
