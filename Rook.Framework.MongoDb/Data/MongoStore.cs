@@ -34,8 +34,7 @@ namespace Rook.Framework.MongoDb.Data
 			ILogger logger,
 			IConfigurationManager configurationManager,
 			IMongoClient mongoClient,
-			IContainerFacade containerFacade,
-			IAmazonFirehoseProducer amazonFirehoseProducer)
+			IContainerFacade containerFacade)
 		{
 			var databaseUri = configurationManager.Get<string>("MongoDatabaseUri");
 			_databaseName = configurationManager.Get<string>("MongoDatabaseName");
