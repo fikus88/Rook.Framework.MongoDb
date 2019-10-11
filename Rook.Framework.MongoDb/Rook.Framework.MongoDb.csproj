@@ -28,8 +28,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MAB.Rook.Framework.Core" Version="2019.10.9.65" />
     <PackageReference Include="MongoDB.Driver" Version="2.9.1" />
+    <PackageReference Include="Rook.Framework.Core" Version="2019.10.11.37" />
   </ItemGroup>
 
 </Project>
