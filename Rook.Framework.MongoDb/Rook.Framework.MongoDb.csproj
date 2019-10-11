@@ -12,7 +12,7 @@
 
     <LangVersion>7.1</LangVersion>
     <ProjectGuid>81DA76FE-0E70-49E0-AE32-359AAA33C40B</ProjectGuid>
-    <PackageVersion>2019.10.9.10</PackageVersion>
+ 
     <Title>Rook.Framework.MongoDb</Title>
     <PackageProjectUrl>https://github.com/rookframework/Rook.Documentation</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/rookframework/Rook.Framework.MongoDb/blob/master/LICENSE     </PackageLicenseUrl>
