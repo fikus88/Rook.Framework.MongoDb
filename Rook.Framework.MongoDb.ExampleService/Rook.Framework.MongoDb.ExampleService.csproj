@@ -17,11 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MAB.Rook.Framework.Core" Version="2019.10.9.65" />
+    <ProjectReference Include="..\Rook.Framework.MongoDb\Rook.Framework.MongoDb.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Rook.Framework.MongoDb\Rook.Framework.MongoDb.csproj" />
+    <PackageReference Include="Rook.Framework.Core" Version="2019.10.11.37" />
   </ItemGroup>
 
 </Project>
