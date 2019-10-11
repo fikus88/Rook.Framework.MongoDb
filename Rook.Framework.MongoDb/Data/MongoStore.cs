@@ -34,17 +34,25 @@ namespace Rook.Framework.MongoDb.Data
 			ILogger logger,
 			IConfigurationManager configurationManager,
 			IMongoClient mongoClient,
-			IContainerFacade containerFacade,
-			IAmazonFirehoseProducer amazonFirehoseProducer)
+			IContainerFacade containerFacade)
 		{
 			var databaseUri = configurationManager.Get<string>("MongoDatabaseUri");
 			_databaseName = configurationManager.Get<string>("MongoDatabaseName");
-			_amazonKinesisStreamName = configurationManager.Get<string>("RepositoryKinesisStream");
+			
+			try
+			{
+				_amazonKinesisStreamName = configurationManager.Get<string>("RepositoryKinesisStream");
+			}
+			catch
+			{
+				_amazonKinesisStreamName = null;
+			}
 			_client = mongoClient;
 			_containerFacade = containerFacade;
 			_client.Create(databaseUri);
 			Logger = logger;
-			_amazonFirehoseProducer = new AmazonFirehoseProducer(logger);
+			if (!string.IsNullOrEmpty(_amazonKinesisStreamName))
+				_amazonFirehoseProducer = new AmazonFirehoseProducer(logger);
 		}
 
 		public StartupPriority StartupPriority { get; } = StartupPriority.Highest;
@@ -225,8 +233,12 @@ namespace Rook.Framework.MongoDb.Data
 			{
 				collection.InsertOne(entityToStore);
 
-				_amazonFirehoseProducer.PutRecord(_amazonKinesisStreamName,
+				
+				if(!string.IsNullOrEmpty(_amazonKinesisStreamName))
+					_amazonFirehoseProducer.PutRecord(_amazonKinesisStreamName,
 					FormatEntity(entityToStore, OperationType.Insert));
+				
+				
 				Logger.Trace($"{nameof(MongoStore)}.{nameof(Put)}",
 					new LogItem("Event", "Insert entity"),
 					new LogItem("Type", typeof(T).ToString),
@@ -250,7 +262,9 @@ namespace Rook.Framework.MongoDb.Data
 			var deleteResult = collection.DeleteMany(filter, deleteOptions);
 			collection.InsertOne(entityToStore);
 
-			_amazonFirehoseProducer.PutRecord(_amazonKinesisStreamName,
+			
+			if(!string.IsNullOrEmpty(_amazonKinesisStreamName))
+				_amazonFirehoseProducer.PutRecord(_amazonKinesisStreamName,
 				deleteResult.DeletedCount != 0
 					? FormatEntity(entityToStore, OperationType.Update)
 					: FormatEntity(entityToStore, OperationType.Insert));

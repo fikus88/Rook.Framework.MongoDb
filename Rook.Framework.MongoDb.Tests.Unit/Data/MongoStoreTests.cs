@@ -38,7 +38,7 @@ namespace Rook.Framework.MongoDb.Tests.Unit.Data
             _amazonFirehoseProducer = new Mock<IAmazonFirehoseProducer>();
         }
 
-        private MongoStore Sut => new MongoStore(_logger.Object, _configurationManager.Object, _mongoClient.Object, _containerFacade.Object, _amazonFirehoseProducer.Object);
+        private MongoStore Sut => new MongoStore(_logger.Object, _configurationManager.Object, _mongoClient.Object, _containerFacade.Object);
 
         [TestMethod]
         public void MongoStore_WhenInstantiated_CallsMongoClientCreate()
@@ -47,7 +47,7 @@ namespace Rook.Framework.MongoDb.Tests.Unit.Data
             var configurationManager = new Mock<IConfigurationManager>();
             configurationManager.SetupGet(x => x.AppSettings).Returns(new AutoDictionary<string, string> {{"MongoDatabaseUri", ""}, {"MongoDatabaseName", ""}});
             
-            new MongoStore(_logger.Object, _configurationManager.Object, _mongoClient.Object, _containerFacade.Object, _amazonFirehoseProducer.Object);
+            new MongoStore(_logger.Object, _configurationManager.Object, _mongoClient.Object, _containerFacade.Object);
 
             _mongoClient.Verify(x => x.Create(It.IsAny<string>()), Times.Once);
         }

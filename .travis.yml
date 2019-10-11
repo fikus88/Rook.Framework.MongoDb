@@ -10,8 +10,8 @@ script:
   - dotnet build -c Release /p:Version="${YEAR}"."${MONTH}"."${DAY}"."${TRAVIS_BUILD_NUMBER}"
   - dotnet pack Rook.Framework.MongoDb/Rook.Framework.MongoDb.csproj -c Release /p:Version="${YEAR}"."${MONTH}"."${DAY}"."${TRAVIS_BUILD_NUMBER}"
   - dotnet test Rook.Framework.MongoDb.Tests.Unit/Rook.Framework.MongoDb.Tests.Unit.csproj
-  - export NUGET_FILE=$(ls Rook.Framework.MongoDb/bin/Release/*.nupkg)
-  - dotnet nuget push "${NUGET_FILE}" -k "${NUGET_KEY}" -s https://www.nuget.org/
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then export NUGET_FILE=$(ls Rook.Framework.MongoDb/bin/Release/*.nupkg); fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then dotnet nuget push "${NUGET_FILE}" -k "${NUGET_KEY}" -s https://www.nuget.org/; fi'
 global:
   - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
   - DOTNET_CLI_TELEMETRY_OPTOUT=1 
