@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MAB.Rook.Framework.Core" Version="2019.10.15.70" />
+    <PackageReference Include="MAB.Rook.Framework.Core" Version="2019.10.16.71" />
   </ItemGroup>
 
   <ItemGroup>
