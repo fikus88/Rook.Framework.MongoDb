@@ -52,7 +52,7 @@ namespace Rook.Framework.MongoDb.Data
 			_client.Create(databaseUri);
 			Logger = logger;
 			if (!string.IsNullOrEmpty(_amazonKinesisStreamName))
-				_amazonFirehoseProducer = new AmazonFirehoseProducer(logger);
+				_amazonFirehoseProducer = new AmazonFirehoseProducer(logger, configurationManager);
 		}
 
 		public StartupPriority StartupPriority { get; } = StartupPriority.Highest;
