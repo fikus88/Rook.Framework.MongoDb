@@ -1,8 +1,9 @@
 ﻿{
   "QueueUri": "amqp://guest:guest@queue:5672",
-  "MongoDatabaseUri": "mongodb://localhost:27017",
+  "MongoDatabaseUri": "mongodb://rook:rook@mongodb:27017",
   "MongoDatabaseName": "exampleservice",
   "LogLevel": "Trace",
   "Port": 81,
-  "UseStructureMap": true
+  "UseStructureMap": true,
+  "DataPumpLambdaName" : "FormatLambdaOutput"
 }
