@@ -7,7 +7,8 @@ Data storage using mongoDB for Rook microservice
 ## Installation
 Install the nuget package<br/>
 Example:<br/>
-PM> Install-Package Rook.Framework.MongoDb
+
+`PM> Install-Package Rook.Framework.MongoDb`
 
 ## Usage
 Read the documentation for a full description of how to use this package
