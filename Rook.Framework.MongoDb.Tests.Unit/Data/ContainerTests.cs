@@ -16,10 +16,8 @@ namespace Rook.Framework.MongoDb.Tests.Unit.Data
             var result = container.GetAllInstances<DataEntity>().ToList();
 
             var containsTestEntity = result.Any(x => x.GetType() == typeof(TestEntity));
-            var containsTestObject = result.Any(x => x.GetType() == typeof(TestObject));
-
+            
             Assert.IsTrue(containsTestEntity);
-            Assert.IsTrue(containsTestObject);
         }
     }
 
@@ -28,8 +26,5 @@ namespace Rook.Framework.MongoDb.Tests.Unit.Data
 
     }
 
-    public class TestObject : DataObject
-    {
 
-    }
 }

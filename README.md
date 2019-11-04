@@ -1,20 +1,25 @@
-#Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Rook.Framework.MongoDb
+Data storage using mongoDB for Rook microservice
 
-#Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+[![Build status](https://travis-ci.org/rookframework/Rook.Framework.MongoDb.svg?branch=master)](https://travis-ci.org/rookframework/Rook.Framework.MongoDb)
+[![nuget](https://img.shields.io/nuget/v/Rook.Framework.MongoDb.svg)](https://www.nuget.org/packages/Rook.Framework.MongoDb/)
 
-#Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Installation
+Install the nuget package<br/>
+Example:<br/>
 
-#Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+`PM> Install-Package Rook.Framework.MongoDb`
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## Usage
+Read the documentation for a full description of how to use this package
+https://github.com/rookframework/Rook.Documentation/wiki
+
+## Contributing
+Pull requests welcome
+
+## Credits
+https://github.com/orgs/rookframework/teams/rook-contributors
+
+## License
+https://github.com/rookframework/Rook.Framework.Api/blob/master/LICENSE
+
